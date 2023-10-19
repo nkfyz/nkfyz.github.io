@@ -100,7 +100,7 @@ year = "2021"
 
 [[publications]]
 title = "WIP: Sysnif: Constructing Workflow from Interleaved Logs in Intelligent IoT System"
-authors = "Zongming Jin, Xueshuo Xie, <b>Yaozheng Fang</b>, Zhaolong Jian, Ye Lu, Guangying Li"
+authors = "Zongming Jin, Xueshuo Xie, Yaozheng Fang, Zhaolong Jian, Ye Lu, Guangying Li"
 publisher = "2021 IEEE 22nd International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM)"
 publisher_site = "https://ieeexplore.ieee.org/xpl/conhome/9469409/proceeding"
 cite_text = "Z. Jin, X. Xie, Y. Fang, Z. Jian, Y. Lu and G. Li, WIP: Sysnif: Constructing Workflow from Interleaved Logs in Intelligent IoT System, 2021 IEEE 22nd International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM), Pisa, Italy, 2021, pp. 264-267, doi: 10.1109/WoWMoM51794.2021.00049."
