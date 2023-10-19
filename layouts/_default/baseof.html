@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="container mt-5">
+    <info>
+      {{ partial "info.html" . }}
+    </info>
+    <hr />
+    <publications>
+      {{ partial "publications.html" . }}
+    </publications>
+    <hr />
+    <awards>
+      {{ partial "awards.html" . }}
+    </awards>
+    <hr />
+    <foot>
+      {{ partial "footer.html" . }}
+    </foot>
+  </div>
+  
+</body>
+</html>

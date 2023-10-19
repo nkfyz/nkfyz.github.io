@@ -1,0 +1,45 @@
+<div class="row">
+    <h2 class="mb-3">Publications</h2>
+    {{ $config := os.ReadFile "/configs/publications.toml" | transform.Unmarshal }}
+    <div class="col">
+        {{ $scratch := newScratch }}
+        {{ $scratch.Add "id_counter" 0 }}
+        {{ range $year := $config.years }}
+        <h4>{{ $year }}</h4>
+            <ul>
+                {{ range $config.publications }}
+                {{ $k := $scratch.Get "id_counter" }}
+                    {{ if eq .year $year }}
+                        <li>
+                            {{ .title }}
+                            <br>
+                            {{ .authors }}
+                            <br>
+                            In <a href="{{ .publisher_site }}" target="_blank">{{ .publisher }}</a>
+                            <br>
+                            [<a href="#" onclick="$('#{{ $k }}_cite').toggle();return false;">Cite</a>] 
+                            [<a href="#" onclick="$('#{{ $k }}_bibtex').toggle();return false;">BibTeX</a>] 
+                            [<a href="#" onclick="$('#{{ $k }}_abstract').toggle();return false;">Abstract</a>] 
+                            [<a href="https://ieeexplore.ieee.org/abstract/document/9780577" target="_blank">Online</a>] 
+                             [<a href="{{ .pdf_name | absURL}}" target="_blank">PDF</a>] 
+                            <div id="{{ $k }}_abstract" style="display: none;">
+                                <p><b>Abstract:</b> {{ .abstract }}</p>
+                            </div>
+                            <div id="{{ $k }}_cite" style="display: none;">
+                                <p>{{ .cite_text  }}</p>
+                            </div>
+                            <div id="{{ $k }}_bibtex" style="display: none;">
+                                <pre>
+{{ .bibtex  }}
+                                </pre>
+                            </div>
+                        </li>
+                        <br>
+                        {{ $scratch.Add "id_counter" 1 }}
+                    {{ end }}
+                {{ end }}
+            </ul>
+        {{ end }}
+        <a>{{ $scratch.Get "id_counter" }} papers totally.</a>
+    </div>
+</div>
