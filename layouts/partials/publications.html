@@ -1,5 +1,8 @@
 <div class="row">
     <h2 class="mb-3">Publications</h2>
+    <p>
+        [<a>First author</a>] [<a>All</a>]
+    </p>
     {{ $config := os.ReadFile "/configs/publications.toml" | transform.Unmarshal }}
     <div class="col">
         {{ $scratch := newScratch }}
@@ -13,7 +16,19 @@
                         <li>
                             <a href="{{ .pdf_name | absURL}}" target="_blank">{{ .title }}</a>
                             <br>
-                            {{ .authors }}
+                            {{ $authors := .authors }}
+                            {{ $authorsArray := split $authors ", " }}
+                            {{ range $index, $element := $authorsArray }}
+                                {{ if in $config.myname $element }}
+                                    <b>{{ $element }}</b>
+                                {{ else }}
+                                    {{ $element }}
+                                {{ end }}
+                                {{ if eq $index (sub (len $authorsArray) 1) }}
+                                {{ else }}
+                                    , 
+                                {{ end }}
+                            {{ end }}
                             <br>
                             In <a href="{{ .publisher_site }}" target="_blank">{{ .publisher }}</a>
                             <br>
