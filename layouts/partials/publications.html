@@ -1,7 +1,7 @@
 <div class="row">
     <h2 class="mb-3">Publications</h2>
     <p>
-        [<a>First author</a>] [<a>All</a>]
+        <!-- [<a>First author</a>] [<a>All</a>] -->
     </p>
     {{ $config := os.ReadFile "/configs/publications.toml" | transform.Unmarshal }}
     <div class="col">
@@ -43,9 +43,7 @@
                                 <p>{{ .cite_text  }}</p>
                             </div>
                             <div id="{{ $k }}_bibtex" style="display: none;">
-                                <pre>
-{{ .bibtex  }}
-                                </pre>
+                                <pre>{{ .bibtex  }}</pre>
                             </div>
                         </li>
                         <br>
