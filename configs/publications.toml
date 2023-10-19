@@ -93,12 +93,12 @@ cite_text = "Zhuang Liu, Ye Lu, Xueshuo Xie, Yaozheng Fang, Zhaolong Jian, and T
 bibtex = ""
 online_site = "https://dl.acm.org/doi/abs/10.1145/3472634.3472652"
 abstract = "Deep neural network (DNN) models have been widely deployed on embedded and mobile devices in lots of application fields such as health care, face recognition, driver assistance, etc. These applications usually require privacy or trusted computing protection. However, diverse hardware resources, various transport protocols, and limited computation and storage capacity make it challenging for traditional embedded systems to provide complex security protection mechanism oriented DNN models. To meet the challenges, we propose Trusted-DNN, a TrustZone-based adaptive isolation strategy for DNN models. We first design a normal pattern to exploit TrustZone technology to provide overall protection for running DNNs. To deploy arbitrary DNN models into TrustZone, we then develop a dynamic model partition method, which makes our strategy easily adaptive to various DNN models and devices. Finally, we employ several optimization techniques to reduce the inference latency of Trusted-DNN models. We perform AlexNet on OP-TEE, which is a TrustZone-based secure operating system, based on a Raspberry Pi 3B+ board. The extensive experimental results highlight that the optimized Trusted-DNN can reduce memory footprint by up to 98% compared with the ordinary program and Trusted-DNN only increase inference latency by 22.8%. Our code is available at https://gitee.com/PaintZero/alexnet-tee."
-pdf_name = "" 
+pdf_name = "/pdf/trusted_dnn.pdf" 
 year = "2021"
 
 [[publications]]
 title = "WIP: Sysnif: Constructing Workflow from Interleaved Logs in Intelligent IoT System"
-authors = "Zongming Jin, Xueshuo Xie, Yaozheng Fang, Zhaolong Jian, Ye Lu, Guangying Li"
+authors = "Zongming Jin, Xueshuo Xie, <b>Yaozheng Fang</b>, Zhaolong Jian, Ye Lu, Guangying Li"
 publisher = "2021 IEEE 22nd International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM)"
 publisher_site = "https://ieeexplore.ieee.org/xpl/conhome/9469409/proceeding"
 cite_text = "Z. Jin, X. Xie, Y. Fang, Z. Jian, Y. Lu and G. Li, WIP: Sysnif: Constructing Workflow from Interleaved Logs in Intelligent IoT System, 2021 IEEE 22nd International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM), Pisa, Italy, 2021, pp. 264-267, doi: 10.1109/WoWMoM51794.2021.00049."

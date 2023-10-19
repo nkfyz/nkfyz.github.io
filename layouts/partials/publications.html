@@ -11,7 +11,7 @@
                 {{ $k := $scratch.Get "id_counter" }}
                     {{ if eq .year $year }}
                         <li>
-                            {{ .title }}
+                            <a href="{{ .pdf_name | absURL}}" target="_blank">{{ .title }}</a>
                             <br>
                             {{ .authors }}
                             <br>
@@ -20,8 +20,7 @@
                             [<a href="#" onclick="$('#{{ $k }}_cite').toggle();return false;">Cite</a>] 
                             [<a href="#" onclick="$('#{{ $k }}_bibtex').toggle();return false;">BibTeX</a>] 
                             [<a href="#" onclick="$('#{{ $k }}_abstract').toggle();return false;">Abstract</a>] 
-                            [<a href="https://ieeexplore.ieee.org/abstract/document/9780577" target="_blank">Online</a>] 
-                             [<a href="{{ .pdf_name | absURL}}" target="_blank">PDF</a>] 
+                            [<a href="https://ieeexplore.ieee.org/abstract/document/9780577" target="_blank">Online</a>]  
                             <div id="{{ $k }}_abstract" style="display: none;">
                                 <p><b>Abstract:</b> {{ .abstract }}</p>
                             </div>
