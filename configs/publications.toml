@@ -4,7 +4,7 @@ myname = ["Yaozheng Fang", "Fang Yaozheng"]
 
 [[publications]]
 title = "DRS: A Deep Reinforcement Learning enhanced Kubernetes Scheduler for Microservice-based System"
-authors = "Zhaolong Jian, Xueshuo Xie, Yaozheng Fang, Yibing Jiang, Tao Li, Ye Lu"
+authors = "Zhaolong Jian, Xueshuo Xie, Yaozheng Fang, Yibing Jiang, Ye Lu, Ankan Dash, Tao Li, Guiling Wang"
 publisher = "Software: Practice and Experience"
 publisher_site = "https://onlinelibrary.wiley.com/journal/1097024x"
 cite_text = "Jian Z, Xie X, Fang Y, et al. DRS: A Deep Reinforcement Learning enhanced Kubernetes Scheduler for Microservice-based System[J]. 2023."
