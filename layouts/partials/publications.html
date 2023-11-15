@@ -35,7 +35,7 @@
                             [<a href="#" onclick="$('#{{ $k }}_cite').toggle();return false;">Cite</a>] 
                             [<a href="#" onclick="$('#{{ $k }}_bibtex').toggle();return false;">BibTeX</a>] 
                             [<a href="#" onclick="$('#{{ $k }}_abstract').toggle();return false;">Abstract</a>] 
-                            [<a href="https://ieeexplore.ieee.org/abstract/document/9780577" target="_blank">Online</a>]
+                            [<a href="{{ .online_site }}" target="_blank">Online</a>]
                             {{ if isset . "slides_cn" }}
                                 [<a href="{{ .slides_cn | absURL }}" target="_blank">Slides (zh-cn)</a>]
                             {{ else if isset . "slides_en"  }}
